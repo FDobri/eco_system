@@ -1,18 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
-public class Animal : MonoBehaviour
+public class Animal
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Thirst;
+    public int ReproductionDesire;
+    public int Hunger;
+    public int Speed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<Animal> EatableAnimals { get; set; }
 }
