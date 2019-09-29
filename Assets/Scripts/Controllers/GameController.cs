@@ -10,14 +10,13 @@ public class GameController : MonoBehaviour
 	}
 
 	#endregion
-	// nunununununununununununununununununununununununununununununun
+	//----------------------------------------------------------------------------------------------------------------------------
 	#region Private
 
-
 	#endregion
-	// nunununununununununununununununununununununununununununununun
+	//----------------------------------------------------------------------------------------------------------------------------
 	#region Public
 
 	#endregion
-	// nunununununununununununununununununununununununununununununun
+	//----------------------------------------------------------------------------------------------------------------------------
 }

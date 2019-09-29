@@ -8,7 +8,7 @@ public class SimulationSetupPanelView : MonoBehaviour
 	private const string SIMULATION_SCENE_NAME = "Scene_01";
 
 	#endregion
-	// nunununununununununununununununununununununununununununununun
+	//----------------------------------------------------------------------------------------------------------------------------
 	#region Public
 
 	public void LaunchScene()
