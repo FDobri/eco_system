@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -988,8 +987,9 @@ GameObject:
   - component: {fileID: 1052448217}
   - component: {fileID: 1052448219}
   - component: {fileID: 1052448218}
+  - component: {fileID: 1052448220}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: SimulationSetupPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Color: {r: 0.43703112, g: 0.5660378, b: 0.4298683, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1053,6 +1053,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052448216}
   m_CullTransparentMesh: 0
+--- !u!114 &1052448220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052448216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5436f7f2ef6d61478b6c95a08f601e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1208833792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,6 +1196,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698245713028740056, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.15267888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698245713028740056, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6791589
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698245713028740056, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1052448220}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LaunchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a95961c2de8fe3b438f0bd77c8084899, type: 3}
