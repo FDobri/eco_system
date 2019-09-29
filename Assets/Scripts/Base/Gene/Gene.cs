@@ -1,5 +1,5 @@
 ﻿public class Gene
 {
-    public float HeredityChance;
-    public float InfluenceOnAttribute;
+	public float HeredityChance;
+	public float InfluenceOnAttribute;
 }

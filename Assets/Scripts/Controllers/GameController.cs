@@ -2,10 +2,10 @@
 
 public class GameController : MonoBehaviour
 {
-    #region MonoBehaviour
+	#region MonoBehaviour
 
-    private void Awake()
-    {
+	private void Awake()
+	{
 		DontDestroyOnLoad(gameObject);
 	}
 
