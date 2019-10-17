@@ -1,20 +1,24 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class SimulationSetupPanelView : MonoBehaviour
+namespace EcoSystem.Views
 {
-	#region Members
-
-	private const string SIMULATION_SCENE_NAME = "Scene_01";
-
-	#endregion
-	//----------------------------------------------------------------------------------------------------------------------------
-	#region Public
-
-	public void LaunchScene()
+	public class SimulationSetupPanelView : MonoBehaviour
 	{
-		SceneManager.LoadScene(SIMULATION_SCENE_NAME);
-	}
+		#region Members
 
-	#endregion
+		public List<InputField> InputFields;
+
+		#endregion
+		//----------------------------------------------------------------------------------------------------------------------------
+		#region Public
+
+		public void OnGenerateButtonClick()
+		{
+			//EcoSystemController.CreateEcoSystem();
+		}
+
+		#endregion
+	}
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EcoSystem
+namespace EcoSystem.Models
 {
 	public class EcoSystem
 	{
