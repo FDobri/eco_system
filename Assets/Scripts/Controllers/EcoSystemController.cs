@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using EcoSystem.Models;
@@ -9,10 +10,9 @@ namespace EcoSystem.Controllers
 	{
 		#region Members
 
-		private const string SIMULATION_SCENE_NAME = "Scene_01";
-
 		public static List<Models.EcoSystem> EcoSystems;
 		public static Models.EcoSystem ActiveEcoSystem;
+		public static EcoSystemController Instance;
 
 		#endregion
 		//----------------------------------------------------------------------------------------------------------------------------
@@ -20,7 +20,10 @@ namespace EcoSystem.Controllers
 
 		private void Awake()
 		{
-			
+			if (Instance == null)
+			{
+				Instance = this;
+			}
 		}
 
 		#endregion
@@ -32,7 +35,6 @@ namespace EcoSystem.Controllers
 			Models.EcoSystem ecoSystem = new Models.EcoSystem(animals);
 			EcoSystems.Add(ecoSystem);
 			ActiveEcoSystem = ecoSystem;
-			SceneManager.LoadScene(SIMULATION_SCENE_NAME, LoadSceneMode.Single);
 		}
 
 		#endregion

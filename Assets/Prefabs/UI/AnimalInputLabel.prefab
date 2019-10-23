@@ -163,6 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5197072866491749217}
+  - component: {fileID: 9143482583225195083}
   m_Layer: 5
   m_Name: AnimalInputLabel
   m_TagString: Untagged
@@ -191,6 +192,20 @@ RectTransform:
   m_AnchoredPosition: {x: -402, y: 0}
   m_SizeDelta: {x: 137.3, y: 120.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9143482583225195083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5319677493409416960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimalType: 0
+  InputField: {fileID: 207423573259970092}
 --- !u!1 &5538576813434967000
 GameObject:
   m_ObjectHideFlags: 0

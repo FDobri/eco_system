@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+        type: 3}
+      propertyPath: AnimalType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea, type: 3}
 --- !u!224 &43165139 stripped
@@ -460,6 +465,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+        type: 3}
+      propertyPath: AnimalType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea, type: 3}
 --- !u!224 &97340609 stripped
@@ -619,6 +629,7 @@ GameObject:
   - component: {fileID: 336404010}
   - component: {fileID: 336404012}
   - component: {fileID: 336404011}
+  - component: {fileID: 336404013}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -665,6 +676,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimalPrefabs: []
+--- !u!114 &336404013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336404009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aedae06fa8f98c429236839677d4b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &388473203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,6 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5436f7f2ef6d61478b6c95a08f601e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputFields: []
 --- !u!1001 &1208833792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1215,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
@@ -1231,11 +1255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1052448220}
+      objectReference: {fileID: 336404013}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LaunchScene
+      value: CreateEcoSystem
       objectReference: {fileID: 0}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
@@ -1441,6 +1465,11 @@ PrefabInstance:
     - target: {fileID: 8085987300706747097, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
         type: 3}
       propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+        type: 3}
+      propertyPath: AnimalType
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1902,6 +1931,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+        type: 3}
+      propertyPath: AnimalType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea, type: 3}
