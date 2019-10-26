@@ -618,6 +618,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 147744264}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &183091377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 7402548116737080353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &298238840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 388473203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336404009
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +847,30 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 388473203}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &404945723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 97340608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &468329999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 43165138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &533897089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5436f7f2ef6d61478b6c95a08f601e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputFields: []
+  AnimalInputLabels:
+  - {fileID: 183091377}
+  - {fileID: 468329999}
+  - {fileID: 404945723}
+  - {fileID: 298238840}
+  - {fileID: 1897317351}
 --- !u!1001 &1208833792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1239,7 +1292,7 @@ PrefabInstance:
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
@@ -1255,11 +1308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 336404013}
+      objectReference: {fileID: 1052448220}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CreateEcoSystem
+      value: OnGenerateButtonClick
       objectReference: {fileID: 0}
     - target: {fileID: 7667569771441576215, guid: a95961c2de8fe3b438f0bd77c8084899,
         type: 3}
@@ -1665,6 +1718,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1897317351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9143482583225195083, guid: a8bfe0b832d6f044dbe8925f2a2fd4ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1318762572}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b19192a86e75a4f8b9a840d514ddca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1991268438
 PrefabInstance:
   m_ObjectHideFlags: 0

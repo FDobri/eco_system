@@ -19,5 +19,7 @@ namespace EcoSystem.Models
 			_Speed = speed;
 			_Genes = genes;
 		}
+
+		public Animal() { }
 	}
 }

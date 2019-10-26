@@ -8,5 +8,7 @@ namespace EcoSystem.Models
 		public Fox(float thirst, float hunger, float strength, float speed, List<Gene> genes) : base(thirst, hunger, strength, speed, genes)
 		{
 		}
+
+		public Fox() : base() { }
 	}
 }

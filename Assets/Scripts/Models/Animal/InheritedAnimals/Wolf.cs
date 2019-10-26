@@ -8,5 +8,7 @@ namespace EcoSystem.Models
 		public Wolf(float thirst, float hunger, float strength, float speed, List<Gene> genes) : base(thirst, hunger, strength, speed, genes)
 		{
 		}
+
+		public Wolf() : base() { } 
 	}
 }

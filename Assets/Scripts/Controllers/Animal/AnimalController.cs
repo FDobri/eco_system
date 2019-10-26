@@ -1,18 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using EcoSystem.Models;
 
-public class AnimalController : MonoBehaviour
+namespace EcoSystem.Controllers
 {
-	// Start is called before the first frame update
-	void Start()
+	public enum AnimalType
 	{
-
+		Bear,
+		Fox,
+		Lynx,
+		Rabbit,
+		Wolf
 	}
 
-	// Update is called once per frame
-	void Update()
+	public class AnimalController
 	{
-
+		public static Animal GetAnimalByType(AnimalType type)
+		{
+			switch (type)
+			{
+				case AnimalType.Bear:
+					return new Bear();
+				case AnimalType.Fox:
+					return new Fox();
+				case AnimalType.Lynx:
+					return new Lynx();
+				case AnimalType.Rabbit:
+					return new Rabbit();
+				case AnimalType.Wolf:
+					return new Wolf();
+				default:
+					return new Animal();
+			}
+		}
 	}
 }

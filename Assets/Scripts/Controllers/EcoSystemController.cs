@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using EcoSystem.Models;
 
 namespace EcoSystem.Controllers
@@ -10,9 +8,11 @@ namespace EcoSystem.Controllers
 	{
 		#region Members
 
-		public static List<Models.EcoSystem> EcoSystems;
 		public static Models.EcoSystem ActiveEcoSystem;
 		public static EcoSystemController Instance;
+
+		public static List<Models.EcoSystem> _EcoSystems = new List<Models.EcoSystem>();
+		private List<Animal> _AnimalsList = new List<Animal>();
 
 		#endregion
 		//----------------------------------------------------------------------------------------------------------------------------
@@ -30,11 +30,17 @@ namespace EcoSystem.Controllers
 		//----------------------------------------------------------------------------------------------------------------------------
 		#region Public
 
-		public void CreateEcoSystem(List<Animal> animals)
+		public void CreateEcoSystem()
 		{
-			Models.EcoSystem ecoSystem = new Models.EcoSystem(animals);
-			EcoSystems.Add(ecoSystem);
+			Models.EcoSystem ecoSystem = new Models.EcoSystem(_AnimalsList);
+			_EcoSystems.Add(ecoSystem);
 			ActiveEcoSystem = ecoSystem;
+		}
+
+		public void AddAnimalToList(AnimalType animalType)
+		{
+			Animal animal = AnimalController.GetAnimalByType(animalType);
+			_AnimalsList.Add(animal);
 		}
 
 		#endregion

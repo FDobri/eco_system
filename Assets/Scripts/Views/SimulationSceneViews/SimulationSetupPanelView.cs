@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using EcoSystem.Controllers;
 
 namespace EcoSystem.Views
 {
-	public enum AnimalType
-	{
-		Bear,
-		Fox,
-		Lynx,
-		Rabbit,
-		Wolf
-	}
-
 	public class SimulationSetupPanelView : MonoBehaviour
 	{
 		#region Members
 
 		private const string SIMULATION_SCENE_NAME = "Scene_01";
 
-		public List<InputField> InputFields;
+		public List<AnimalInputLabelView> AnimalInputLabels;
+
+		private EcoSystemController _EcoSystemController;
+
+		#endregion
+		//----------------------------------------------------------------------------------------------------------------------------
+		#region MonoBehaviour
+
+		private void Start()
+		{
+			_EcoSystemController = EcoSystemController.Instance;
+		}
 
 		#endregion
 		//----------------------------------------------------------------------------------------------------------------------------
@@ -29,10 +31,10 @@ namespace EcoSystem.Views
 
 		public void OnGenerateButtonClick()
 		{
-			//EcoSystemController.CreateEcoSystem();
-			SceneManager.LoadScene(SIMULATION_SCENE_NAME, LoadSceneMode.Additive);
+			_FillAnimalList();
+			_EcoSystemController.CreateEcoSystem();
 			StartCoroutine(_BeginSimulation());
-
+			// Instantiate all the animals from the EcoSystemController's _AnimalsList.
 		}
 
 		#endregion
@@ -41,8 +43,19 @@ namespace EcoSystem.Views
 
 		private IEnumerator _BeginSimulation()
 		{
+			SceneManager.LoadScene(SIMULATION_SCENE_NAME, LoadSceneMode.Single);
 			yield return new WaitUntil(() => SceneManager.GetActiveScene().name.Equals(SIMULATION_SCENE_NAME));
-			Debug.Log("Simulation started");
+		}
+
+		private void _FillAnimalList()
+		{
+			foreach (AnimalInputLabelView label in AnimalInputLabels)
+			{
+				for (int i = 0; i < label.GetInputFieldValue(); i++)
+				{
+					_EcoSystemController.AddAnimalToList(label.AnimalType);
+				}
+			}
 		}
 
 		#endregion

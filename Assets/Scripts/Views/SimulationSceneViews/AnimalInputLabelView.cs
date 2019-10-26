@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+using EcoSystem.Controllers;
 
 namespace EcoSystem.Views
 {
@@ -16,7 +16,7 @@ namespace EcoSystem.Views
 		public AnimalType AnimalType;
 		public InputField InputField;
 
-		private string _PreviousInputFieldString;
+		private string _ValidatedString;
 
 		#endregion
 		//----------------------------------------------------------------------------------------------------------------------------
@@ -42,16 +42,16 @@ namespace EcoSystem.Views
 
 		private void _ValidateFieldInput()
 		{
-			_PreviousInputFieldString = string.Empty;
+			_ValidatedString = string.Empty;
 			foreach (char c in InputField.text)
 			{
 				if (c < MIN_SINGLE_DIGIT_NUMBER || c > MAX_SINGLE_DIGIT_NUMBER)
 				{
-					InputField.text = _PreviousInputFieldString;
+					InputField.text = _ValidatedString;
 				}
 				else
 				{
-					_PreviousInputFieldString += c;
+					_ValidatedString += c;
 				}
 			}
 		}
